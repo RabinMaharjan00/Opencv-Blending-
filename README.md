@@ -1,2 +1,2 @@
-# Opencv-Blending
+#------Opencv-------
 Example for blending the image with opencv
