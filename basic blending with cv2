@@ -1,0 +1,19 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+#Read the image as RGB 
+img = cv2.imread("dog_backpack.jpg")
+img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+img2 = cv2.imread("watermark_no_copy.png")
+img2 = cv2.cvtColor(img2,cv2.COLOR_BGR2RGB)
+
+#Resizing so that both image is of same size
+img1 =cv2.resize(img,(1200,1200))
+img2 = cv2.resize(img2,(1200,1200)
+
+#Blending the image with cv2 
+
+blended = cv2.addWeighted(src1=img1,alpha=0.8,src2=img2,beta=0.4,gamma=0)
+
+plt.imshow(blended)
